@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navbar {
+        display: flex;
+        padding: 1vh;
+        flex-direction: row;
+    }
+
+    .first {
+        height: 69vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .first::before {
+        content: "";
+        background: url(https://zomato-landing-page.netlify.app/Images/Nav.jpg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .twoparts {
+        display: flex;
+        justify-content: space-between;
+        padding: 1vh;
+        width: 100%;
+    }
+
+    .twoparts h6 {
+        color: white;
+        font-size: 2.3vh;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .secondpart {
+        display: flex;
+        padding: 1vh;
+        margin-right: 12vw;
+        gap: 2.6vw;
+    }
+
+    .firstpart {
+        margin-left: 20vh;
+    }
+
+    .firstpart h6 {
+        font-size: 1.8vh;
+        margin-top: 1vh;
+    }
+
+    .nextpart {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4vh;
+    }
+
+    .nextpart h2 {
+        color: white;
+        font-size: 4.5vh;
+    }
+
+    .nextpart img {
+        width: 20%;
+        margin-top: 10vh;
+        height: 20%;
+        margin-bottom: 3vh;
+    }
+
+    .searchbar {
+        display: flex;
+        height: 6.1vh;
+        width: 60%;
+        max-width: 800px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        justify-content: space-between;
+        padding: 5px 15px;
+        margin-top: 4.4vh;
+    }
+
+    .firstinput {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        flex: 1;
+        margin-right: 3vh;
+    }
+.firstinput i{
+    color:rgb(192, 87, 87);
+    font-size:1.6vw;
+}
+.secondinput i{
+    color:rgb(163, 153, 153);
+    padding-left:1vh ;
+    font-size:1.6vw;
+}
+    .border {
+        border: 0.01rem solid rgb(179, 172, 172);
+        flex: 0;
+    }
+
+    .secondinput {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        flex: 2;
+
+    }
+
+    input {
+        border: none;
+        outline: none;
+        text-align: left;
+        padding-left: 2vh;
+        width: 100%;
+        font-size: 1.9vh;
+    }
+
+    .threeparts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin:1vh;
+        /* margin-left: 5vw; */
+        /* gap:1vh; */
+        margin-top: 40px;
+        /* align-items: stretch; */
+        flex-wrap: wrap;
+        /* flex:2 2 2 ; */
+        /* flex:1 1 calc(30%-40px); */
+    }
+
+.item {
+    border:0.5px solid rgb(222, 213, 213);
+display:flex;
+/* width:24vw; when i fixed it as 24vw then the item will always take up some part of viewport even when it was growing smaller so flex-wrap:wrap did not work cause items were getting fixed in the width they got they were not exceeding the given width*(the condition for which it works) */
+
+/* height:6vh;did it so .item will have room to grow */
+width:24%;
+/* flex:1 1 calc(30%-40px); */
+flex-direction: column;
+justify-content: left;
+box-sizing: content-box;
+/* gap: 1vw; */
+padding:0;
+border-radius: 11px;
+margin :10px;
+margin-top: 0.2%;
+
+}
+.item img{
+/* height:18vh;
+width:23vw; */
+width:100%;
+height:200px;
+object-fit: cover;
+display: block;
+border-radius: 11px 11px 0px 0px;
+}
+.item h3, .item h6 {
+    margin: 0;
+    padding: 5px 10px; 
+    font-size: 2vh; 
+    text-align: left; 
+    color: #333; 
+}
+
+.item h3 {
+    font-weight: bold; 
+    font-size: larger;
+}
+
+.item h6 {
+    font-size: 1.8vh; 
+    color: #666; 
+}
+.firstpart a i{
+
+display:none;
+
+}
+@media screen and (max-width: 730px) {
+    
+    .secondpart a h6{
+        display: none;
+    }
+    .firstpart a h6{
+        display: none;
+    }
+    .firstpart a i {
+        display: block;
+        font-size: 4.3vh;
+
+    }
+    .firstpart{
+        margin-left:2vw ;
+    }
+
+    
+    
+    .firstinput, .secondinput {
+        width: 100%;
+    }
+    
+    .nextpart h2 {
+        font-size:6vh;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .nextpart img{
+        height:74px;
+        width:300px;
+    }
+    .nextpart{
+        margin-top:0vh;
+    }
+    .secondpart{
+        margin-bottom: 2vh;
+    }
+    .item a h6{overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .item{
+        width:30%;
+    }
+    .searchbar{
+        width:80%;
+        height:50px;
+    }
+    .threeparts{
+        display: flex;
+        justify-content: left;
+        flex:1 1 1;
+        
+    }
+
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="first">
+        <div class="navbar">
+            <div class="twoparts">
+                <div class="firstpart">
+                    <a href="#">
+                        <i class="ri-menu-line"></i>
+                    </a>
+                    <a>
+                       <h6>get the app</h6>
+                    </a>
+                </div>
+                <div class="secondpart">
+                    <a href="#">
+                        <h6>Investor Relations</h6>
+                    </a>
+                    <a href="#">
+                        <h6>Add restaurant</h6>
+                    </a>
+                    <a href="#">
+                        <h6>Log in</h6>
+                    </a>
+                    <a href="#">
+                        <h6>Sign up</h6>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="nextpart">
+            <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="logo">
+            <h2>Discover the best food & drinks in Bhubaneswar</h2>
+            <div class="searchbar">
+                <div class="firstinput">
+                    <i class="ri-map-pin-2-fill"></i><input type="text" placeholder="Bhubaneswar">
+                </div>
+                <div class="border"></div>
+                <div class="secondinput">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search for a restaurant,cuisine or a dish."
+                    class="restaurantsearch">
+                   
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="threeparts">
+            <div class="item">
+                <a href="#"> <img
+                        src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                        alt="">
+                    <h3>Order Online</h3>
+                    <h6>Stay home and order to your door</h6>
+                </a>
+
+            </div>
+            <div class="item">
+                <a href="#"><img
+                        src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+                        alt="">
+                    <h3>Dining</h3>
+                    <h6>View the city's favourite dining venues </h6>
+                </a>
+            </div>
+            <div class="item">
+                <a
+                    href="#"><img src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" alt="">
+                    <h3>Nightlife and Clubs</h3>
+                    <h6>Explore the city's top nightlife outlets.</h6>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
